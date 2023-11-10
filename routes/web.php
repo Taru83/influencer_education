@@ -21,3 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//新規管理ユーザー登録画面
+Route::get('/register',[App\Http\Controllers\CurriculumController::class, 'register'])->name('register');
+//管理ユーザー登録ボタン
+Route::post('/store',[App\Http\Controllers\CurriculumController::class, 'store'])->name('store');
